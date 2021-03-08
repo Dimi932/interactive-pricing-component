@@ -1,0 +1,213 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  font-size: 15px;
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 95vh 5vh;
+  color: hsl(225, 20%, 60%);
+  background-color: hsl(230, 100%, 99%);
+}
+
+.wrapper {
+  display: grid;
+  grid-template-rows: 50% 50%;
+  width: 100%;
+  /* Upper half of the space */
+}
+
+.upper-half {
+  background: url(images/pattern-circles.svg) no-repeat center top 60px aliceblue;
+  border-bottom-left-radius: 30%;
+}
+
+h1, p {
+  text-align: center;
+}
+
+h1 {
+  margin: 90px 0 16px 0;
+  color: hsl(227, 35%, 25%);
+}
+
+/* ----------------------------- */
+/* Bottom Half of the space */
+.bottom-half {
+  display: grid;
+}
+
+/* Central Box!!!!! */
+.box {
+  height: 40vh;
+  background-color: #fff;
+  width: 600px;
+  align-self: center;
+  justify-self: center;
+  border-radius: 12px;
+  box-shadow: 4px 6px 10px rgb(211, 211, 211);
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  margin-top: -350px;
+}
+
+.top-box {
+  background-color: hsl(224, 65%, 99%);
+  /* padding: 50px; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 0.5fr 1fr;
+  border-top-left-radius: 12px;
+border-top-right-radius: 12px;
+}
+
+section {
+  grid-column: span 2;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+  align-self: center;
+}
+.first-section, .fourth-section {
+  grid-column: span 1;
+}
+.fourth-section {
+  justify-self: end;
+}
+.k-number {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  align-self: center;
+}
+
+/* .k-number::before {
+  content: "100K ";
+} */
+strong {
+  font-size: 30px;
+  color: hsl(227, 35%, 25%);
+}
+
+/* The slider */
+#myinput {
+  background: linear-gradient(to right, #a5f3eb 0%, #a5f3eb 25%, #eaeefb 50%, #eaeefb 75%, #eaeefb 100%);
+  border-radius: 8px;
+  height: 12px;
+  width: 100%;
+  outline: none;
+  transition: background 450ms ease-in;
+  -webkit-appearance: none;
+}
+
+#myinput::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 35px;
+  height: 35px;
+  border: 0;
+  background: url(images/icon-slider.svg) no-repeat center top 11px hsl(174, 86%, 45%);
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0.5px 5px 35px hsl(174, 86%, 45%);
+}
+
+#myinput::-moz-range-thumb {
+  width: 35px;
+  height: 35px;
+  border: 0;
+  background: url(images/icon-slider.svg) no-repeat center top 11px hsl(174, 86%, 45%);
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0.5px 5px 35px hsl(174, 86%, 45%);
+}
+
+/* -------------------------- */
+.third-section {
+  justify-content: space-evenly;
+}
+
+.form-check-input:checked {
+  background-color: hsl(174, 86%, 45%);
+  border: none;
+  width: 45px;
+  height: 20px;
+}
+
+.form-switch .form-check-input {
+  width: 45px;
+  height: 20px;
+  margin-left: -3.5em;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgb255, 255, 255, 0.25%29'/%3e%3c/svg%3e");
+}
+
+small {
+  color: hsl(15, 100%, 70%);
+  background-color: hsl(14, 92%, 95%);
+  border-radius: 12px;
+  padding: 4px 6px;
+  margin-left: 6px;
+}
+
+.hiden {
+  display: none;
+}
+
+.bottom-box {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 50px;
+  border-top: 1px solid;
+  border-top-color: lightgrey;
+}
+
+ul {
+  display: grid;
+  width: 40%;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+  font-weight: lighter;
+  align-self: center;
+  font-size: 13px;
+}
+
+li::before {
+  content: url(images/icon-check.svg);
+  width: 20px;
+  display: inline-block;
+}
+
+button {
+  display: grid;
+  height: 40px;
+  width: 35%;
+  align-items: center;
+  align-self: center;
+  background-color: hsl(227, 35%, 25%);
+  color: #fff;
+  border-radius: 20px;
+  border-style: none;
+  font-size: 13px;
+}
+
+button:hover {
+  background-color: hsl(174, 86%, 45%);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  align-self: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
